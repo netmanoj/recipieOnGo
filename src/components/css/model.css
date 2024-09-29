@@ -1,0 +1,87 @@
+/* modal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 600px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1001;
+}
+
+.modal-details {
+    display: flex;
+    width: 100%;
+}
+
+.modal-image {
+    width: 200px; /* Fixed width for the image */
+    height: auto;
+    max-height: 200px; /* Set a max height */
+    object-fit: cover;
+    margin-right: 20px; /* Spacing between image and text */
+}
+
+.modal-text {
+    max-width: 300px;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .modal-content {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center align the items */
+    }
+
+    .modal-details {
+        flex-direction: column; /* Stack the image and text */
+        align-items: center; /* Center align the contents */
+    }
+
+    .modal-image {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+    }
+
+    .modal-text {
+        max-width: 100%; /* Allow text to use full width */
+        overflow-y: visible; /* Ensure all text is visible */
+    }
+}
+
+.modal-text h2 {
+    margin: 0 0 10px 0;
+}
+
+.modal-text p {
+    margin: 0;
+    padding: 0;
+}
