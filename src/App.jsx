@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { MealProvider } from './context/MealContext';
-import HomePage from './components/HomePage'; // Import HomePage component
+import HomePage from './components/HomePage'; 
 import SearchForm from './components/SearchForm';
 import MealList from './components/MealList';
 
