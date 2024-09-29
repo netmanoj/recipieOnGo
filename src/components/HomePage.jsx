@@ -1,22 +1,28 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
-import './css/homepage.css'
+import { useNavigate } from 'react-router-dom'; // Updated import
+import './css/homepage.css';
 
-const Home = () => {
-  const history = useHistory();
-
+const HomePage = () => {
+  const navigate = useNavigate(); // Create a navigate function
   const handleSearchClick = () => {
-    history.push('/recipes'); // Navigate to the recipe search page
+    console.log("Button clicked, navigating to /meals");
+    navigate('/meals'); // Navigate to meals page
   };
+  
 
   return (
-    <div className="home">
+    <div className="home-page"> {/* Updated class name for styling */}
       <h1>Welcome to Recipe On GO 🍽️</h1>
       <p>
-        Are you ready to discover the best recipes? Search for delicious meals
-        that will tantalize your taste buds! 🍕✨ Whether you're looking for 
-        healthy options, quick snacks, or gourmet delights, we've got you covered! 
-        Lets embark on a culinary adventure together! 🌍👩‍🍳👨‍🍳
+        Are you ready to discover the best recipes that the culinary world has to offer? 
+        Our platform is designed to help you search for delicious meals that will tantalize 
+        your taste buds and bring joy to your dining table! 🍕✨ Whether you're on the hunt 
+        for healthy options that nourish your body, quick snacks to satisfy your cravings, 
+        or gourmet delights to impress your guests, we’ve got you covered! 🌟 
+        From mouthwatering appetizers to delightful desserts, our extensive collection of 
+        recipes caters to every palate and occasion. 
+        Let's embark on this culinary adventure together and explore flavors from around 
+        the globe! 🌍👩‍🍳👨‍🍳 Dive into the world of cooking, get inspired, and unleash your inner chef!
       </p>
       <button className="search-button" onClick={handleSearchClick}>
         Search Recipes
@@ -25,4 +31,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
