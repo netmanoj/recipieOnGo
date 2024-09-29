@@ -1,0 +1,24 @@
+html, body {
+    height: 100%; /* Full height */
+    margin: 0; /* Remove default margin */
+}
+
+.App {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    min-height: 100vh; /* Full viewport height */
+}
+
+.footer {
+    background-color: #ecf7d4; /* Green background */
+    color: rgb(0, 0, 0); /* Text color */
+    text-align: center; /* Centered text */
+    padding: 20px; /* Padding */
+    margin-top: auto; /* Push footer to the bottom */
+    width: 100%; /* Full width */
+    font-weight: 100;
+}
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}

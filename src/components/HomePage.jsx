@@ -12,7 +12,7 @@ const HomePage = () => {
 
   return (
     <div className="home-page"> {/* Updated class name for styling */}
-      <h1>Welcome to Recipe On GO 🍽️</h1>
+      <h1>Welcome to Recipe On Go 🍽️</h1>
       <p>
         Are you ready to discover the best recipes that the culinary world has to offer? 
         Our platform is designed to help you search for delicious meals that will tantalize 
@@ -25,7 +25,7 @@ const HomePage = () => {
         the globe! 🌍👩‍🍳👨‍🍳 Dive into the world of cooking, get inspired, and unleash your inner chef!
       </p>
       <button className="search-button" onClick={handleSearchClick}>
-        Search Recipes
+        Get Started
       </button>
     </div>
   );

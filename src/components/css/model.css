@@ -16,18 +16,29 @@
     background-color: white;
     border-radius: 8px;
     padding: 20px;
-    width: 600px;
-    max-width: 90%;
+    width: 90vw; /* Use viewport width for responsiveness */
+    max-width: 700px; /* Set maximum width */
+    height: auto; /* Allow height to adjust automatically */
+    max-height: 90vh; /* Set maximum height relative to viewport */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
-    flex-direction: row;
     position: relative;
+    overflow: hidden; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+/* Adjusted modal-details for proper layout */
+.modal-details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Space between the image and text */
+    align-items: center; /* Center align the items vertically */
 }
 
 .close-btn {
     background: none;
     border: none;
-    font-size: 20px;
+    font-size: 1.5rem; /* Use rem for responsiveness */
     cursor: pointer;
     position: absolute;
     top: 10px;
@@ -35,23 +46,39 @@
     z-index: 1001;
 }
 
-.modal-details {
-    display: flex;
-    width: 100%;
+.close-btn:hover {
+    font-size: 1.75rem; /* Use rem for responsiveness */
+    color: red;
 }
 
 .modal-image {
-    width: 200px; /* Fixed width for the image */
+    width: 250px; /* Adjusted width for the image */
     height: auto;
-    max-height: 200px; /* Set a max height */
+    max-height: 250px; /* Set a max height */
     object-fit: cover;
-    margin-right: 20px; /* Spacing between image and text */
+    margin-left: auto; /* Push image to the right */
 }
 
 .modal-text {
-    max-width: 300px;
+    max-width: 400px; /* Increased max width for text */
     overflow-y: auto;
-    max-height: 300px;
+    max-height: 400px; /* Increased max height */
+    padding-left: 10px; /* Padding to bring text closer to the left border */
+}
+
+/* Margin adjustments for text elements */
+.modal-text h2 {
+    margin: 0 0 5px 0; /* Reduced bottom margin for spacing */
+}
+
+.modal-text p {
+    margin: 0.5rem 0; /* Use rem for vertical spacing */
+    padding: 0;
+}
+
+.modal-text ul {
+    padding-left: 1.25rem; /* Add padding to the left of the list */
+    margin: 0.75rem 0; /* Use rem for vertical margin for spacing */
 }
 
 /* Responsive Styles */
@@ -67,21 +94,13 @@
     }
 
     .modal-image {
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 20px; /* Add bottom margin for spacing */
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 15px; /* Bottom margin for spacing */
     }
 
     .modal-text {
         max-width: 100%; /* Allow text to use full width */
         overflow-y: visible; /* Ensure all text is visible */
+        padding-left: 0; /* Remove left padding on small screens */
     }
-}
-
-.modal-text h2 {
-    margin: 0 0 10px 0;
-}
-
-.modal-text p {
-    margin: 0;
-    padding: 0;
 }

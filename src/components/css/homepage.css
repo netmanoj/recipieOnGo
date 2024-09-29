@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+
 .home-page {
     text-align: center; /* Center the text and button */
     padding: 40px; /* Add more padding for a spacious look */
     border-radius: 8px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Signika", sans-serif;
     background-color: #f9f9f9; /* Optional: add a light background color */
 }
 
@@ -23,4 +25,8 @@
 
 .search-button:hover {
     background-color: #45a049; /* Darker green */
+}
+
+p{
+    font-family: "Signika", sans-serif;
 }

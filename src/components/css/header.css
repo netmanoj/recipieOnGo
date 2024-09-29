@@ -1,0 +1,35 @@
+.header {
+    background-color: #ecf7d4; /* Green background */
+    color: white; /* White text */
+    padding: 20px; /* Padding */
+    text-align: center; /* Centered text */
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    margin: 0; /* Remove default margin */
+    color: rgb(0, 0, 0);
+}
+
+.header nav {
+    margin-top: 10px; /* Space between title and nav */
+}
+
+.header ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.header li {
+    display: inline; /* Inline list items */
+    margin: 0 15px; /* Space between items */
+}
+
+.header a {
+    color: rgb(0, 0, 0); /* White text */
+    text-decoration: none; /* Remove underline */
+}
+
+.header a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
