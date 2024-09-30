@@ -23,7 +23,6 @@ const RecipeModal = ({ recipe, closeModal }) => {
           <div className="modal-text">
             <h2>{recipe.label}</h2>
             <p><strong>Calories:</strong> {Math.round(recipe.calories)} kcal</p>
-            <p><strong>Servings:</strong> {recipe.servings}</p>
             <p><strong>Ingredients:</strong></p>
             <ul>
               {recipe.ingredients.map((ingredient, index) => (
