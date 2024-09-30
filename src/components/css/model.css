@@ -80,10 +80,19 @@
     color: #1b4242;
     font-size: 20px;
 }
+.modal-text h3 {
+    margin: 0 0 5px 0;
+    font-family: 'SUSE', sans-serif;
+    color: #1b4242;
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: 400;
+}
 
 .modal-text p, .modal-text ul {
     margin: 0.5rem 0;
     padding: 0;
+    margin-bottom: 5px;
 }
 
 /* Responsive Styles */

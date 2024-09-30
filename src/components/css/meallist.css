@@ -15,7 +15,7 @@
 /* Meal Item Styles with Glass UI */
 .meal {
   border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass effect */
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 15px;
   margin: 10px;
   background: rgba(255, 255, 255, 0.25); /* Semi-transparent background */
@@ -34,8 +34,9 @@
 
 /* Hover Effect */
 .meal:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Increase size by 5% */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Keep the shadow effect */
+  transition: transform 0.2s ease-in-out; /* Smooth transition for scaling */
 }
 
 /* Meal Image */
@@ -77,11 +78,11 @@
   }
 }
 
-/* 2 items per row for tablet-sized screens */
+/* 2 items per row for screens wider than 768px */
 @media (max-width: 768px) {
   .meal {
-    flex: 1 1 calc(50% - 10px); /* 2 items per row */
-    max-width: calc(50% - 10px);
+    flex: 1 1 calc(50% - 20px); /* 2 items per row */
+    max-width: calc(50% - 20px);
   }
 }
 
