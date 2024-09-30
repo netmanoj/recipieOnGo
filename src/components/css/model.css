@@ -25,15 +25,23 @@
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     border-radius: 16px;
-    padding: 20px;
+    padding: 25px;
     width: 90vw;
     max-width: 700px;
     max-height: 90vh;
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
-    overflow-y: auto;
+    overflow-y: auto; /* Allows scrolling */
     box-sizing: border-box;
     position: relative;
     border: 1px solid black; /* Solid black border */
+    
+    /* Hiding the scrollbar */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.modal-content::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
 }
 
 .modal-details {
@@ -69,9 +77,17 @@
 
 .modal-text {
     max-width: 400px;
-    overflow-y: auto;
+    overflow-y: auto; /* Allows scrolling */
     max-height: 400px;
     padding-left: 10px;
+
+    /* Hiding the scrollbar */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.modal-text::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
 }
 
 .modal-text h2 {
