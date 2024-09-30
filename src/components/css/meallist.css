@@ -6,8 +6,8 @@
   margin: 0 -5px;
   padding: 10px 15px;
   box-sizing: border-box;
-  min-height: 400px; 
-  transition: min-height 0.3s ease; 
+  min-height: 400px;
+  transition: min-height 0.3s ease;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -21,8 +21,8 @@
   background: rgba(255, 255, 255, 0.25); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Apply glass blur effect */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for floating effect */
-  flex: 1 1 calc(25% - 20px); /* Ensure 4 items per row */
-  max-width: calc(25% - 20px); /* Max width for 4 items */
+  flex: 1 1 calc(25% - 20px); /* 4 items per row by default */
+  max-width: calc(25% - 20px);
   box-sizing: border-box;
   cursor: pointer;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -32,10 +32,10 @@
   font-family: 'SUSE', sans-serif;
 }
 
-/* Hover Effect with Enhanced Glass Effect */
+/* Hover Effect */
 .meal:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Meal Image */
@@ -45,7 +45,7 @@
   border-radius: 8px;
   margin-bottom: 10px;
   object-fit: cover;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow around image */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Meal Title */
@@ -68,16 +68,27 @@
 }
 
 /* Responsive Styles for Meals */
+
+/* 3 items per row for screens wider than 1024px */
+@media (max-width: 1024px) {
+  .meal {
+    flex: 1 1 calc(33.33% - 20px); /* 3 items per row */
+    max-width: calc(33.33% - 20px);
+  }
+}
+
+/* 2 items per row for tablet-sized screens */
 @media (max-width: 768px) {
   .meal {
-    flex: 1 1 calc(50% - 10px); /* 2 items per row on tablet screens */
+    flex: 1 1 calc(50% - 10px); /* 2 items per row */
     max-width: calc(50% - 10px);
   }
 }
 
+/* 1 item per row for mobile screens */
 @media (max-width: 480px) {
   .meal {
-    flex: 1 1 100%; /* 1 item per row on small screens */
+    flex: 1 1 100%; /* 1 item per row */
     max-width: 100%;
   }
 }
@@ -88,12 +99,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 30vh; 
+  height: 30vh;
 }
 
 .loading-spinner {
   font-size: 2rem;
-  animation: spin 1s linear infinite; 
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
