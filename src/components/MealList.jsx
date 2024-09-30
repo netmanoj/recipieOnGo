@@ -5,7 +5,7 @@ import Modal from './Modal';
 import './css/meallist.css';
 
 const MealList = () => {
-  const { recipes, loading } = useMealContext();
+  const { recipes, loading, query } = useMealContext(); // Ensure to get query for the message
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
   const openModal = (recipe) => {
@@ -44,6 +44,8 @@ const MealList = () => {
             <p>Calories: {Math.round(recipe.recipe.calories)}</p>
           </div>
         ))
+      ) : !loading && query ? ( // Check if there are no recipes and a query exists
+        <h3>No recipes found for "{query}". Please try a different search.</h3>
       ) : (
         <h3>Enter Search Keywords</h3>
       )}

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import './css/model.css'; 
+import { FaTimes } from 'react-icons/fa'; // Import the close icon
+import './css/model.css';
 
 const RecipeModal = ({ recipe, closeModal }) => {
 
@@ -14,7 +15,9 @@ const RecipeModal = ({ recipe, closeModal }) => {
   return (
     <div className="modal-overlay" onClick={closeModal}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="close-btn" onClick={closeModal}>X</button>
+        <button className="close-btn" onClick={closeModal}>
+          <FaTimes className="close-icon" />
+        </button>
         <div className="modal-details">
           <img src={recipe.image} alt={recipe.label} className="modal-image" />
           <div className="modal-text">

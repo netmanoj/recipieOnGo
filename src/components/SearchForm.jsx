@@ -1,12 +1,19 @@
 import React from 'react';
 import { useMealContext } from '../context/MealContext';
-import './css/searchform.css'
+import './css/searchform.css';
+
 const SearchForm = () => {
   const { query, setQuery, handleSearch } = useMealContext();
 
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    setQuery(value); // Update the query
+    handleSearch(value); // Trigger search as the user types
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleSearch(query);
+    handleSearch(query); // Ensure search can still be triggered on form submission
   };
 
   return (
@@ -14,8 +21,8 @@ const SearchForm = () => {
       <input
         type="text"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Enter Food Name/Location To Get Recipie"
+        onChange={handleInputChange} // Use the new handler
+        placeholder="Enter Food Name/Location To Get Recipe"
       />
       <button type="submit">Search</button>
     </form>
@@ -23,4 +30,3 @@ const SearchForm = () => {
 };
 
 export default SearchForm;
-

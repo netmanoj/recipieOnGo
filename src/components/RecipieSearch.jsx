@@ -26,16 +26,20 @@ const RecipeSearch = () => {
       {loading && <p className="loading-text">Loading recipes...</p>}
 
       <div className="recipe-list">
-        {recipes.length > 0 && recipes.map((recipe, index) => (
-          <div key={index} className="recipe-item">
-            <h3>{recipe.recipe.label}</h3>
-            <img src={recipe.recipe.image} alt={recipe.recipe.label} className="recipe-image"/>
-            <p>Calories: {Math.round(recipe.recipe.calories)}</p>
-            <a href={recipe.recipe.url} target="_blank" rel="noopener noreferrer" className="recipe-link">
-              View Recipe
-            </a>
-          </div>
-        ))}
+        {recipes.length > 0 ? (
+          recipes.map((recipe, index) => (
+            <div key={index} className="recipe-item">
+              <h3>{recipe.recipe.label}</h3>
+              <img src={recipe.recipe.image} alt={recipe.recipe.label} className="recipe-image"/>
+              <p>Calories: {Math.round(recipe.recipe.calories)}</p>
+              <a href={recipe.recipe.url} target="_blank" rel="noopener noreferrer" className="recipe-link">
+                View Recipe
+              </a>
+            </div>
+          ))
+        ) : !loading && query ? ( // Show message if no recipes found and query is not empty
+          <p className="no-results-text">No recipes found for "{query}". Please try a different search.</p>
+        ) : null}
       </div>
     </div>
   );

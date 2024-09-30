@@ -1,38 +1,46 @@
 /* SearchForm.css */
 .search-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;  
-    margin-top: 60px;
-  }
-  
-  .search-form input[type='text'] {
-    padding: 10px;
-    border: 2px solid #00663a;
-    font-family: 'SUSE',sans-serif;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 350px;
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
-  
-  .search-form button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    background-color:#419936;; 
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    width: 100%;
-    max-width: 150px;
-    font-family: 'SUSE',sans-serif;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px auto 30px; /* Center form and adjust margins */
+  width: 100%; /* Ensure full width for better responsiveness */
+  max-width: 400px; /* Limit maximum width for larger screens */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
 
-  
-  .search-form button:hover {
-    background-color: #2a632c; 
+.search-form input[type='text'] {
+  padding: 10px;
+  border: 2px solid #00663a;
+  font-family: 'SUSE', sans-serif;
+  border-radius: 5px;
+  width: 100%; /* Full width for the input */
+  font-size: 1rem;
+  margin-bottom: 10px;
+  box-sizing: border-box; /* Include padding and border in total width */
+}
+
+.search-form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #419936; 
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%; /* Full width for the button */
+  max-width: 150px; /* Keep maximum width for the button */
+  font-family: 'SUSE', sans-serif;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.search-form button:hover {
+  background-color: #2a632c; 
+}
+
+/* Optional: Add some responsiveness */
+@media (max-width: 480px) {
+  .search-form {
+    max-width: 90%; /* Allow more space on small screens */
   }
-  
+}
