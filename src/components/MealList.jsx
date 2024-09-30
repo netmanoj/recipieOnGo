@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useMealContext } from '../context/MealContext';
+import { FaSpinner } from 'react-icons/fa'; // Import the spinner icon
 import Modal from './Modal';
-import './css/meallist.css'
+import './css/meallist.css';
 
 const MealList = () => {
   const { recipes, loading } = useMealContext();
@@ -25,11 +26,16 @@ const MealList = () => {
   }, []);
 
   if (loading) {
-    return <p>Loading meals...</p>;
+    return (
+      <div className="loading-container">
+        <FaSpinner className="loading-spinner" />
+        <p>Loading meals...</p>
+      </div>
+    );
   }
 
   return (
-    <div className="meal-list"> {/* Add the meal-list class here */}
+    <div className="meal-list">
       {recipes.length > 0 ? (
         recipes.map((recipe, index) => (
           <div key={index} className="meal" onClick={() => openModal(recipe)}>

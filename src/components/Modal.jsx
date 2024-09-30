@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './css/model.css'; 
 
-const RecipeModal = ({ recipe, closeModal }) => { 
+const RecipeModal = ({ recipe, closeModal }) => {
+
+  // Freeze background when modal is open
+  useEffect(() => {
+    document.body.classList.add('modal-open');
+    return () => {
+      document.body.classList.remove('modal-open');
+    };
+  }, []);
+
   return (
     <div className="modal-overlay" onClick={closeModal}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -38,4 +47,4 @@ const RecipeModal = ({ recipe, closeModal }) => {
   );
 };
 
-export default RecipeModal; 
+export default RecipeModal;

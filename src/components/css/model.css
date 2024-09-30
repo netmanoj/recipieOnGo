@@ -15,6 +15,13 @@
     font-family: 'SUSE', sans-serif;
 }
 
+/* Freezes background when modal is open */
+.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
 .modal-content {
     background-color: white;
     border-radius: 8px;
@@ -72,6 +79,7 @@
     margin: 0 0 5px 0; /* Reduced bottom margin for spacing */
     font-family: 'SUSE', sans-serif;
     color: #1b4242;
+    font-size: 20px;
 }
 
 .modal-text p {
