@@ -5,17 +5,16 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    overflow-y: auto; /* Allow vertical scrolling */
-    overscroll-behavior: contain; /* Prevent background scroll when modal is open */
+    overflow-y: auto;
+    overscroll-behavior: contain;
     font-family: 'SUSE', sans-serif;
 }
 
-/* Freezes background when modal is open */
 .modal-open {
     overflow: hidden;
     position: fixed;
@@ -23,30 +22,31 @@
 }
 
 .modal-content {
-    background-color: white;
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
     padding: 20px;
     width: 90vw;
     max-width: 700px;
-    max-height: 90vh; /* Set maximum height */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow-y: auto; /* Make the modal scrollable */
+    max-height: 90vh;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
+    overflow-y: auto;
     box-sizing: border-box;
     position: relative;
+    border: 1px solid black; /* Solid black border */
 }
 
-/* Adjusted modal-details for proper layout */
 .modal-details {
     display: flex;
     width: 100%;
-    justify-content: space-between; /* Space between the image and text */
-    align-items: center; /* Center align the items vertically */
+    justify-content: space-between;
+    align-items: center;
 }
 
 .close-btn {
     background: none;
     border: none;
-    font-size: 1.5rem; /* Use rem for responsiveness */
+    font-size: 1.5rem;
     cursor: pointer;
     position: absolute;
     top: 10px;
@@ -55,63 +55,57 @@
 }
 
 .close-btn:hover {
-    font-size: 1.75rem; /* Use rem for responsiveness */
+    font-size: 1.75rem;
     color: red;
 }
 
 .modal-image {
-    width: 250px; /* Adjusted width for the image */
+    width: 250px;
     height: auto;
-    max-height: 250px; /* Set a max height */
+    max-height: 250px;
     object-fit: cover;
-    margin-left: auto; /* Push image to the right */
+    margin-left: auto;
 }
 
 .modal-text {
-    max-width: 400px; /* Increased max width for text */
+    max-width: 400px;
     overflow-y: auto;
-    max-height: 400px; /* Increased max height */
-    padding-left: 10px; /* Padding to bring text closer to the left border */
+    max-height: 400px;
+    padding-left: 10px;
 }
 
-/* Margin adjustments for text elements */
 .modal-text h2 {
-    margin: 0 0 5px 0; /* Reduced bottom margin for spacing */
+    margin: 0 0 5px 0;
     font-family: 'SUSE', sans-serif;
     color: #1b4242;
     font-size: 20px;
 }
 
-.modal-text p {
-    margin: 0.5rem 0; /* Use rem for vertical spacing */
+.modal-text p, .modal-text ul {
+    margin: 0.5rem 0;
     padding: 0;
-}
-
-.modal-text ul {
-    padding-left: 1.25rem; /* Add padding to the left of the list */
-    margin: 0.75rem 0; /* Use rem for vertical margin for spacing */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     .modal-content {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: center; /* Center align the items */
+        flex-direction: column;
+        align-items: center;
     }
 
     .modal-details {
-        flex-direction: column; /* Stack the image and text */
-        align-items: center; /* Center align the contents */
+        flex-direction: column;
+        align-items: center;
     }
 
     .modal-image {
-        margin-left: 0; /* Remove left margin */
-        margin-bottom: 15px; /* Bottom margin for spacing */
+        margin-left: 0;
+        margin-bottom: 15px;
     }
 
     .modal-text {
-        max-width: 100%; /* Allow text to use full width */
-        overflow-y: visible; /* Ensure all text is visible */
-        padding-left: 0; /* Remove left padding on small screens */
+        max-width: 100%;
+        overflow-y: visible;
+        padding-left: 0;
     }
 }

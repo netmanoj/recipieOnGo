@@ -6,22 +6,23 @@
   margin: 0 -5px;
   padding: 10px 15px;
   box-sizing: border-box;
-  min-height: 400px; /* Set a minimum height to prevent shaking */
-  transition: min-height 0.3s ease; /* Smooth transition for height changes */
+  min-height: 400px; 
+  transition: min-height 0.3s ease; 
   margin-left: 20px;
   margin-right: 20px;
 }
 
-/* Meal Item Styles */
+/* Meal Item Styles with Glass UI */
 .meal {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 10px;
-  margin: 5px;
-  background-color: #ffffff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(25% - 10px); /* Default to 4 items in a row */
-  max-width: calc(25% - 10px);
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass effect */
+  border-radius: 12px;
+  padding: 15px;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.25); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply glass blur effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for floating effect */
+  flex: 1 1 calc(25% - 20px); /* Ensure 4 items per row */
+  max-width: calc(25% - 20px); /* Max width for 4 items */
   box-sizing: border-box;
   cursor: pointer;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -31,34 +32,35 @@
   font-family: 'SUSE', sans-serif;
 }
 
-/* Hover Effect for Meal Item */
+/* Hover Effect with Enhanced Glass Effect */
 .meal:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
 /* Meal Image */
 .meal img {
   max-width: 100%;
   height: auto;
-  border-radius: 6px;
-  margin-bottom: 8px;
+  border-radius: 8px;
+  margin-bottom: 10px;
   object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow around image */
 }
 
 /* Meal Title */
 .meal h3 {
-  font-size: 15px;
-  margin: 8px 0;
+  font-size: 16px;
+  margin: 10px 0;
   color: #1b4242;
   text-align: center;
   font-family: 'SUSE', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* Meal Description */
 .meal p {
-  margin: 4px 0;
+  margin: 6px 0;
   color: #666;
   text-align: center;
   font-size: 14px;
@@ -68,29 +70,30 @@
 /* Responsive Styles for Meals */
 @media (max-width: 768px) {
   .meal {
-    flex: 1 1 calc(50% - 10px);
+    flex: 1 1 calc(50% - 10px); /* 2 items per row on tablet screens */
     max-width: calc(50% - 10px);
   }
 }
 
 @media (max-width: 480px) {
   .meal {
-    flex: 1 1 100%;
+    flex: 1 1 100%; /* 1 item per row on small screens */
     max-width: 100%;
   }
 }
 
+/* Loading Spinner */
 .loading-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 30vh; /* Height for loading state */
+  height: 30vh; 
 }
 
 .loading-spinner {
-  font-size: 2rem; /* Adjust size as needed */
-  animation: spin 1s linear infinite; /* Spinner animation */
+  font-size: 2rem;
+  animation: spin 1s linear infinite; 
 }
 
 @keyframes spin {
