@@ -27,6 +27,7 @@ const HomePage = () => {
       <button className="search-button" onClick={handleSearchClick}>
         Get Started ↩
       </button>
+      <img src="/cook.gif" alt="Cooking Animation" className="cook-gif" />
     </div>
   );
 };
