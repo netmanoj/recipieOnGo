@@ -5,7 +5,7 @@ import './css/header.css'; // Create this CSS file for styling
 const Header = () => {
   return (
     <header className="header">
-      <h1>Recipe On Go 🍽️</h1>
+      <h1>Recipe On Go ‎𐂐◯𓇋</h1>
       <nav>
         <ul>
           <li>
