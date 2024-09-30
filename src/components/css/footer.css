@@ -10,15 +10,39 @@ html, body {
 }
 
 .footer {
-    background-color: #1b4242; /* Green background */
+    background-color: #1b4242; /* Dark background */
     color: rgb(255, 255, 255); /* Text color */
     text-align: center; /* Centered text */
     padding: 20px; /* Padding */
     margin-top: auto; /* Push footer to the bottom */
     width: 100%; /* Full width */
     font-weight: 100;
+    margin-top: 20px; /* Add top margin to the footer */
 }
-p{
+
+p {
     font-family: 'SUSE', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
+}
+
+.github-link {
+    color: white; /* White text for the link */
+    text-decoration: none; /* Remove underline from link */
+    margin-top: 10px; /* Space between copyright and GitHub link */
+    font-size: 16px; /* Increase font size */
+    padding: 10px 15px; /* Add padding for better clickability */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background transition */
+    display: inline-flex; /* Align icon and text */
+    align-items: center; /* Center icon and text vertically */
+    font-family: 'SUSE',sans-serif;
+    font-weight: 500;
+}
+
+.github-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighten background on hover */
+}
+
+.github-icon {
+    margin-right: 5px; /* Space between icon and text */
 }
