@@ -1,14 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
 .header {
-    background-color: #ecf7d4; /* Green background */
+    background-color: #1b4242; /* Green background */
     color: white; /* White text */
     padding: 20px; /* Padding */
     text-align: center; /* Centered text */
     margin-bottom: 15px;
+    font-family: 'SUSE',sans-serif;
 }
 
 .header h1 {
     margin: 0; /* Remove default margin */
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: 'SUSE',sans-serif;
 }
 
 .header nav {
@@ -26,7 +29,7 @@
 }
 
 .header a {
-    color: rgb(0, 0, 0); /* White text */
+    color: rgb(255, 255, 255); /* White text */
     text-decoration: none; /* Remove underline */
 }
 

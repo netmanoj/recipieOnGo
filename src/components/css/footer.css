@@ -10,8 +10,8 @@ html, body {
 }
 
 .footer {
-    background-color: #ecf7d4; /* Green background */
-    color: rgb(0, 0, 0); /* Text color */
+    background-color: #1b4242; /* Green background */
+    color: rgb(255, 255, 255); /* Text color */
     text-align: center; /* Centered text */
     padding: 20px; /* Padding */
     margin-top: auto; /* Push footer to the bottom */
@@ -19,6 +19,6 @@ html, body {
     font-weight: 100;
 }
 p{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'SUSE', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
 }

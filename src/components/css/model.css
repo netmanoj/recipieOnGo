@@ -1,4 +1,4 @@
-/* modal.css */
+/* General Modal Styles */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -10,21 +10,22 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    overflow-y: auto; /* Allow vertical scrolling */
+    overscroll-behavior: contain; /* Prevent background scroll when modal is open */
+    font-family: 'SUSE', sans-serif;
 }
 
 .modal-content {
     background-color: white;
     border-radius: 8px;
     padding: 20px;
-    width: 90vw; /* Use viewport width for responsiveness */
-    max-width: 700px; /* Set maximum width */
-    height: auto; /* Allow height to adjust automatically */
-    max-height: 90vh; /* Set maximum height relative to viewport */
+    width: 90vw;
+    max-width: 700px;
+    max-height: 90vh; /* Set maximum height */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
+    overflow-y: auto; /* Make the modal scrollable */
+    box-sizing: border-box;
     position: relative;
-    overflow: hidden; /* Prevent overflow */
-    box-sizing: border-box; /* Include padding in width/height calculations */
 }
 
 /* Adjusted modal-details for proper layout */
@@ -69,6 +70,8 @@
 /* Margin adjustments for text elements */
 .modal-text h2 {
     margin: 0 0 5px 0; /* Reduced bottom margin for spacing */
+    font-family: 'SUSE', sans-serif;
+    color: #1b4242;
 }
 
 .modal-text p {
