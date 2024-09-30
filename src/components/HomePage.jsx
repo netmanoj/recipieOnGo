@@ -25,7 +25,7 @@ const HomePage = () => {
         the globe! 🌍👩‍🍳👨‍🍳 Dive into the world of cooking, get inspired, and unleash your inner chef!
       </p>
       <button className="search-button" onClick={handleSearchClick}>
-        Get Started
+        Get Started ↩
       </button>
     </div>
   );
