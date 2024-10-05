@@ -26,4 +26,4 @@ To get started with the Recipe Finder App, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/netmanoj/recipe-finder-app.git
+   git clone https://github.com/netmanoj/recipeongo.git
