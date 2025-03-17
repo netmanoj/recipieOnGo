@@ -1,55 +1,277 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
 
 .home-page {
-    text-align: center; /* Center the text and button */
-    padding: 40px; /* Add more padding for a spacious look */
-    border-radius: 8px;
-    font-family: "SUSE", sans-serif;
-    background-color: #f9f9f9; /* Optional: add a light background color */
+    font-family: "Signika", sans-serif;
+    background-color: #ffffff;
+    overflow-x: hidden;
 }
 
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 50vh;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    min-height: 600px;
+
+    
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin-top: -50px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #24292f;
+    line-height: 1.2;
+}
+
+.hero-text {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #57606a;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Categories Section */
+.categories-section {
+    padding: 40px 20px;
+    background-color: #f6f8fa;
+}
+
+.categories-section h2 {
+    text-align: center;
+    margin-bottom: 32px;
+    color: #24292f;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background: white;
+    padding: 24px 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    border: 1px solid #e1e4e8;
+}
+
+.category-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #2ea043;
+}
+
+.category-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.category-card h3 {
+    font-size: 16px;
+    color: #24292f;
+    margin: 0;
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.features-section h2 {
+    text-align: center;
+    margin-bottom: 48px;
+    color: #24292f;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: white;
+    padding: 32px 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.2s ease;
+    border: 1px solid #e1e4e8;
+}
+
+.feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+    display: block;
+    color: #2ea043;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    color: #24292f;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #57606a;
+    line-height: 1.5;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f6f8fa;
+    color: #24292f;
+}
+
+.cta-section h2 {
+    margin-bottom: 16px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.cta-section p {
+    margin-bottom: 32px;
+    color: #57606a;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Buttons */
 .search-button {
-    background-color: #39853c; /* Green */
+    background-color: #2ea043;
     border: none;
     color: white;
-    padding: 12px 24px; /* Adjust padding for a larger button */
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px; /* Increase font size for better visibility */
-    margin: 20px auto; /* Centering margin */
+    padding: 12px 24px;
+    font-size: 14px;
+    border-radius: 6px;
     cursor: pointer;
-    font-family: 'SUSE', sans-serif;
-    border-radius: 5px;
-    transition: background-color 0.3s; /* Smooth transition on hover */
+    transition: all 0.2s ease;
+    font-family: 'Signika', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid transparent;
 }
 
 .search-button:hover {
-    background-color: #45a049; /* Darker green */
+    background-color: #2c974b;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-p {
-    font-family: "Signika", sans-serif;
-    margin-bottom: 20px; /* Add bottom margin for spacing */
+.cta-button {
+    background-color: #2ea043;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Signika', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.cook-gif {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 20px auto 0;  /* Adjusted bottom margin to 10px */
-    border-radius: 8px;
+.cta-button:hover {
+    background-color: #2c974b;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Media query for larger screens */
-@media (min-width: 768px) {
-    .cook-gif {
-        max-width: 400px;  /* Set a max width for tablet and desktop */
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 1024px) {
-    .cook-gif {
-        max-width: 500px;  /* Adjust max width for larger screens */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categories-section,
+    .features-section,
+    .cta-section {
+        padding: 60px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        padding: 20px;
+    }
+
+    .feature-card {
+        padding: 24px;
     }
 }
