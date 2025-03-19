@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+
 /* SearchForm.css */
 .search-form {
   display: flex;
@@ -9,115 +11,164 @@
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-.search-form input[type='text'] {
-  padding: 10px;
-  border: 2px solid #00663a;
-  font-family: 'SUSE', sans-serif;
-  border-radius: 5px;
-  width: 100%; /* Full width for the input */
-  font-size: 1rem;
+/* Search Input Container */
+.search-input-container {
+  display: flex;
+  width: 100%;
+  gap: 10px;
   margin-bottom: 10px;
-  box-sizing: border-box; /* Include padding and border in total width */
 }
 
-.search-form button {
+.search-input-container input[type='text'] {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #00663a;
+  font-family: 'Signika', sans-serif;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Filter Toggle Button */
+.filter-toggle {
+  padding: 10px 15px;
+  background-color: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  color: #24292f;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  min-width: 100px;
+}
+
+.filter-toggle:hover {
+  background-color: #f3f4f6;
+  border-color: #bdc4cc;
+}
+
+.filter-icon {
+  font-size: 16px;
+}
+
+/* Filters Dropdown */
+.filters-dropdown {
+  width: 100%;
+  background: white;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section {
+  margin-bottom: 16px;
+}
+
+.filter-section:last-child {
+  margin-bottom: 0;
+}
+
+.filter-section h4 {
+  color: #24292f;
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.filter-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #57606a;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.filter-option:hover {
+  background-color: #f6f8fa;
+}
+
+.filter-option input[type="checkbox"],
+.filter-option input[type="radio"] {
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Search Button */
+.search-form button[type="submit"] {
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
-  background-color: #419936; 
+  background-color: #2ea043;
   color: white;
   font-size: 1rem;
   cursor: pointer;
-  width: 100%; /* Full width for the button */
-  max-width: 150px; /* Keep maximum width for the button */
-  font-family: 'SUSE', sans-serif;
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  width: 100%;
+  max-width: 150px;
+  font-family: 'Signika', sans-serif;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
 }
 
-.search-form button:hover {
-  background-color: #2a632c; 
+.search-form button[type="submit"]:hover {
+  background-color: #2c974b;
 }
 
-.search-container {
-  position: relative; /* To position suggestions relative to the input */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center align items in the container */
-}
-
+/* Suggestions */
 .suggestions {
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center the buttons horizontally */
-  flex-wrap: wrap; /* Allow wrapping of buttons */
-  margin-top: 10px; /* Space between form and suggestions */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .suggestion-button {
-  padding: 10px 15px; /* Padding for buttons */
-  margin: 5px; /* Space between buttons */
-  border: none; /* Remove default border */
-  border-radius: 20px; /* High border radius */
-  background-color: #00663a; /* Button background color */
-  color: white; /* Button text color */
-  cursor: pointer; /* Pointer on hover */
-  font-family: 'SUSE', sans-serif; /* Same font as input */
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  background-color: #2ea043;
+  color: white;
+  cursor: pointer;
+  font-family: 'Signika', sans-serif;
+  transition: background-color 0.3s ease;
 }
 
 .suggestion-button:hover {
-  background-color: #2a632c; /* Darker shade on hover */
+  background-color: #2c974b;
 }
 
-/* Search Form Styles */
-.search-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center form elements */
-  margin: 60px auto 30px; /* Center form and adjust margins */
-  width: 100%; /* Ensure full width for better responsiveness */
-  max-width: 400px; /* Limit maximum width for larger screens */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
-
-.search-form input[type='text'] {
-  padding: 10px;
-  border: 2px solid #00663a;
-  font-family: 'SUSE', sans-serif;
-  border-radius: 5px;
-  width: 100%; /* Full width for the input */
-  font-size: 1rem;
-  margin-bottom: 10px;
-  box-sizing: border-box; /* Include padding and border in total width */
-}
-
-.search-form button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  background-color: #419936; 
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  width: 100%; /* Full width for the button */
-  max-width: 150px; /* Keep maximum width for the button */
-  font-family: 'SUSE', sans-serif;
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.search-form button:hover {
-  background-color: #2a632c; 
-}
-
-/* Optional: Add some responsiveness */
+/* Responsive Design */
 @media (max-width: 480px) {
   .search-form {
-    max-width: 90%; /* Allow more space on small screens */
+    max-width: 90%;
   }
-}
 
-/* Optional: Add some responsiveness */
-@media (max-width: 480px) {
-  .search-form {
-    max-width: 90%; /* Allow more space on small screens */
+  .search-input-container {
+    flex-direction: column;
+  }
+
+  .filter-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .filter-options {
+    grid-template-columns: 1fr;
   }
 }
